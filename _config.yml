@@ -1,0 +1,14 @@
+# Site settings
+title: My Awesome Site
+author: Your Name
+description: "A Jekyll theme inspired by Covr."
+
+# Set a path to your cover image
+# This will be the first image on your site.
+# Place your image in /assets/images/
+cover_image: /assets/images/Théâtre_D’opéra_Spatial.png
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed

@@ -1,0 +1,90 @@
+/* 1. FONT DEFINITION */
+:root {
+  /* FONT CHANGE: Prioritizing Helvetica/Arial for the target look */
+  --font-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. GLOBAL STYLES */
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4e4e4e;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  color: #000000;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 0.0625em !important;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 3. LAYOUT STYLES for the Covr effect */
+.full-screen-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.full-screen-section h1,
+.full-screen-section h2 {
+  color: #ffffff;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 4rem; /* Slightly larger for impact */
+  font-weight: 400;
+  letter-spacing: 0px; /* A slight tightening of the letters */
+  /* SPACING CHANGE: Pushing the title down from the exact center */
+  margin-top: 0vh; /* Nudges the title down by 5% of the screen height */
+  line-height: 1; /* This brings the lines closer together */
+}
+
+.section-text {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  /* SPACING CHANGE: Reducing space between title and text */
+  margin-top: -2.5rem; /* Brings text much closer to the title */
+}
+
+/*
+  4. STYLE MODIFIERS (THE NEW CODE IS HERE)
+  ================================================
+  This section overrides the default colors when a section has the 'dark-text' class.
+*/
+.full-screen-section.dark-text {
+  color: #000000; /* Change default text color to black */
+}
+
+.full-screen-section.dark-text h1,
+.full-screen-section.dark-text h2,
+.full-screen-section.dark-text .section-text {
+  color: #000000; /* Change all heading and text colors to black */
+}
+
+/*# sourceMappingURL=main.css.map */

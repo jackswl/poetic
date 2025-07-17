@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% for section in page.sections %}
+  <div class="full-screen-section {{ section.style }}" style="background-image: url('{{ section.image_url | relative_url }}');">
+    <h2 class="section-title" data-aos="fade-up">{{ section.title | newline_to_br }}</h2>
+    <p class="section-text" data-aos="fade-up" data-aos-delay="200">{{ section.text }}</p>
+  </div>
+{% endfor %}
